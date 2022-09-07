@@ -3,6 +3,7 @@ package com.example.voice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.widget.Button;
@@ -24,5 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        requestPermissions();
+
+        
+    }
+
+    private void requestPermissions() {
+        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES)
     }
 }
